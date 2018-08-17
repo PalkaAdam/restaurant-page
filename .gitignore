@@ -39,3 +39,6 @@ env.bak/
 venv.bak/
 .idea/
 
+*.pyc
+*~
+__pycache__
