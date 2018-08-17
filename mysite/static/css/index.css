@@ -1,0 +1,22 @@
+#first {
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+}
+#second {
+    width: 100%;
+    height: 100vh;
+    background-color: blue;
+}
+#third {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-color: yellow;
+}
+#fourth {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-color: green;
+}
