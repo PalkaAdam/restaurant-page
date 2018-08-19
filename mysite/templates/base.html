@@ -1,0 +1,118 @@
+{% load staticfiles %}
+<html lang="en">
+
+<head>
+    <title>Italian Restaurant</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<!-- Navigation menu bar -->
+
+<nav class="navbar sticky-top navbar-expand-md navbar-dark">
+  <a class="navbar-brand" href="#">
+    <img src="/static/logos/palka_logo.png" class="logo">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="#about">O NAS <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          MENU
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">KOKTAJLE</a>
+          <a class="dropdown-item" href="#">KARTA WIN</a>
+          <a class="dropdown-item" href="#">KARTA ALKOHOLI</a>
+        </div>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="#third">COCTAILBAR</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="#fourth">NEWSY</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="#fourth">PROMOCJE</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#fourth">LUNCH</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#fourth">KONTAKT</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Scroll up button -->
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">
+    <i class="fas fa-angle-up"></i>
+</button>
+
+<!-- Space for blocks -->
+
+{% block content%}
+
+{% endblock %}
+
+<!-- Footer -->
+
+<footer>
+    <div class="container-fluid py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <h3><b>GODZINY OTWARCIA</b></h3>
+            <p><b>Pon-Czw</b>12:00-23:00</p>
+            <p><b>Piątek</b>12:00-01:00</p>
+            <p><b>Sobota</b>10:00-01:00</p>
+            <p><b>Niedziela</b>12:00-22:00</p>
+          </div>
+          <div class="col-sm-4">
+            <img src="/static/logos/palka_restaurant.png" class="responsive">
+          </div>
+          <div class="col-sm-4">
+            <h3><b>ADRES</b></h3>
+            <p><b>UL.MARSZAŁKOWSKA XX</b></p>
+            <p>WARSZAWA</p>
+            <p><b>+48 123 456 789</b></p>
+            <p>KONTAKT@EXAMPLE.COM</p>
+          </div>
+      </div>
+     </div>
+</footer>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+</body>
+</html>
