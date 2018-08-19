@@ -2,6 +2,9 @@
     max-width: 100%;
     height: auto;
 }
+h1 {
+    font-weight: bold;
+}
 
 #first {
     width: 100%;
@@ -26,18 +29,42 @@
 }
 
 #menu {
-    padding-top: 200px;
+    padding-top: 100px;
+    width: 100%;
+    min-height: 100vh;
+    color: white;
+    text-align: center;
+    background-image: url("/static/logos/back3.png");
+}
+
+#newsy {
+    padding-top: 100px;
     width: 100%;
     min-height: 100vh;
     background-color: white;
+    text-align: center;
 }
-
-#fourth {
+#newsy p {
+    font-size: 16pt;
+}
+#newsy h2 {
+    font-weight: bold;
+}
+#promo {
+    width: 100%;
+    min-height: 100vh;
+    background-color: yellow;
+}
+#lunch {
     width: 100%;
     min-height: 100vh;
     background-color: green;
 }
-
+#kontakt {
+    width: 100%;
+    min-height: 100vh;
+    background-color: yellow;
+}
 footer {
     background-color: #3A3737;
 }
@@ -66,9 +93,6 @@ nav a {
 #home-logo {
     height: 100vh;
     width: 100%;
-}
-.py-10 {
-    padding-top: ($spacer * .3) !important;
 }
 
 @media only screen and (max-width: 992px){
@@ -119,7 +143,7 @@ nav a {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    width: 65%;
+    width: 75%;
     height: 60%;
     padding: 2%;
 
