@@ -46,25 +46,25 @@
           <div class="col-sm-3">
               <a href="#"><img src="/static/logos/cold-starters.jpg" class="img-responsive"></a>
               <a href="#"><div class="text-block">
-                    <h4>PRZYSTAWKI ZIMNE</h4>
+                    <h5>PRZYSTAWKI ZIMNE</h5>
               </div></a>
           </div>
           <div class="col-sm-3">
               <a href="#"><img src="/static/logos/hot-starters.jpg" class="img-responsive"></a>
               <a href="#"><div class="text-block">
-                    <h4>PRZYSTAWKI CIEPŁE</h4>
+                    <h5>PRZYSTAWKI CIEPŁE</h5>
               </div></a>
           </div>
           <div class="col-sm-3">
               <a href="#"><img src="/static/logos/salads.jpg" class="img-responsive"></a>
               <a href="#"><div class="text-block">
-                    <h4>SAŁATY</h4>
+                    <h5>SAŁATY</h5>
               </div></a>
           </div>
           <div class="col-sm-3">
               <a href="#"><img src="/static/logos/pasta.jpg" class="img-responsive"></a>
               <a href="#"><div class="text-block">
-                    <h4>PASTY</h4>
+                    <h5>PASTY</h5>
               </div></a>
           </div>
       </div>
@@ -73,25 +73,25 @@
           <div class="col-sm-3">
               <a href="#"> <img src="/static/logos/soup.jpg" class="img-responsive"></a>
               <a href="#"><div class="text-block">
-                    <h4>ZUPY</h4>
+                    <h5>ZUPY</h5>
               </div></a>
           </div>
           <div class="col-sm-3">
               <a href="#"><img src="/static/logos/burger.jpg" class="img-responsive"></a>
               <a href="#"><div class="text-block">
-                    <h4>BURGERY</h4>
+                    <h5>BURGERY</h5>
               </div></a>
           </div>
           <div class="col-sm-3">
               <a href="#"><img src="/static/logos/quesadilla.jpg" class="img-responsive"></a>
               <a href="#"><div class="text-block">
-                    <h4>QUESADILLAS</h4>
+                    <h5>QUESADILLAS</h5>
               </div></a>
           </div>
           <div class="col-sm-3">
               <a href="#"><img src="/static/logos/hot-meal.jpg" class="img-responsive"></a>
               <a href="#"><div class="text-block">
-                    <h4>DANIA GŁÓWNE</h4>
+                    <h5>DANIA GŁÓWNE</h5>
               </div></a>
           </div>
       </div>
@@ -100,25 +100,25 @@
           <div class="col-sm-3">
               <a href="#"><img src="/static/logos/deserts.jpg" class="img-responsive"></a>
               <a href="#"><div class="text-block">
-                    <h4>DESERY</h4>
+                    <h5>DESERY</h5>
               </div></a>
           </div>
           <div class="col-sm-3">
               <a href="#"><img src="/static/logos/drinks.jpg" class="img-responsive"></a>
               <a href="#"><div class="text-block">
-                    <h4>NAPOJE</h4>
+                    <h5>NAPOJE</h5>
               </div></a>
           </div>
           <div class="col-sm-3">
               <a href="#"><img src="/static/logos/alcohol.jpg" class="img-responsive"></a>
               <a href="#"><div class="text-block">
-                    <h4>ALKOHOLE</h4>
+                    <h5>ALKOHOLE</h5>
               </div></a>
           </div>
           <div class="col-sm-3">
               <a href="#"><img src="/static/logos/cocktail.jpg" class="img-responsive"></a>
               <a href="#"><div class="text-block">
-                    <h4>KOKTAJLE</h4>
+                    <h5>KOKTAJLE</h5>
               </div></a>
           </div>
       </div>
@@ -137,11 +137,9 @@
           </div>
           <div class="col-sm-6 align-self-start">
               <h2>#Lorem ipsum</h2>
-              <p>________</p>
               <p>
                   Lorem ipsum dolor sit amet enim. Etiam ullamcorper.
                   Suspendisse a pellentesque dui, non felis.
-
               </p>
           </div>
       </div>
@@ -149,11 +147,9 @@
       <div class="row justify-content-between">
           <div class="col-sm-6 align-self-center">
               <h2>#Lorem ipsum</h2>
-              <p>________</p>
               <p>
                   Lorem ipsum dolor sit amet enim. Etiam ullamcorper.
                   Suspendisse a pellentesque dui, non felis.
-
               </p>
           </div>
           <div class="col-sm-4 align-self-center">
@@ -167,33 +163,53 @@
           </div>
           <div class="col-sm-6 align-self-end">
               <h2>#Lorem ipsum</h2>
-              <p>________</p>
               <p>
                   Lorem ipsum dolor sit amet enim. Etiam ullamcorper.
                   Suspendisse a pellentesque dui, non felis.
-
               </p>
           </div>
       </div>
+      <br>
   </div>
 </div>
 
-<!-- Fourth page -->
-
-<div id="promo">
-  <p>TEST</p>
-</div>
-
-<!-- Fourth page -->
-
-<div id="lunch">
-  <p>TEST</p>
-</div>
-
-<!-- Fourth page -->
+<!-- Contact page -->
 
 <div id="kontakt">
-  <p>TEST</p>
+    <div id="map">
+        <iframe frameborder="0" src=
+            "https://www.google.com/maps/embed/v1/place?zoom=15&center=52.2297,21.0122&key=AIzaSyD0fP9jGUEf8Z-DID0NKzMMOpHrX3HfL_I&q=52.230054, 21.011317"
+         >
+        </iframe>
+    </div>
+    <div id="kontakt-mail">
+        {% csrf_token %}
+        <div class="fieldWrapper">
+            <div class="row align-items-start">
+                <div class="col-sm-4">
+                    <h5>Imię i nazwisko</h5>
+                    {{ form.contact_name }}
+                </div>
+                <div class="col-sm-4">
+                    <h5>Telefon</h5> {{ form.phone_number}}
+                </div>
+                <div class="col-sm-4">
+                    <h5>Email</h5> {{ form.from_email }}
+                </div>
+
+                <div class="col-sm-12 py-2">
+                    <h5>Wiadomość</h5> {{form.message}}
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-sm-auto">
+                    <button class="send" type="submit">
+                        Wyślij wiadomość
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 </body>

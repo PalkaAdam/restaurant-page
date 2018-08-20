@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Italian Restaurant</title>
+    <title>PALKA Restaurant</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -27,13 +27,15 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav mx-auto">
       <li class="nav-item ">
-        <a class="nav-link" href="#about">
-            O NAS
+        <a class="nav-link" href="{% url 'index' %}#about">
+          O NAS
             <span class="sr-only">(current)</span>
         </a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="#menu">MENU</a>
+        <a class="nav-link" href="{% url 'index' %}#menu">
+          MENU
+        </a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#"
@@ -44,22 +46,24 @@
           COCKTAILBAR
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">KOKTAJLE</a>
-          <a class="dropdown-item" href="#">KARTA WIN</a>
-          <a class="dropdown-item" href="#">KARTA ALKOHOLI</a>
+          <a class="dropdown-item" href="{% url 'cocktails' %}">KOKTAJLE</a>
+          <a class="dropdown-item" href="{% url 'whine' %}">KARTA WIN</a>
         </div>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="#newsy">NEWSY</a>
-      </li>
-      <li class="nav-item ">
-        <a class="nav-link" href="#promo">PROMOCJE</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#lunch">LUNCH</a>
+        <a class="nav-link" href="{% url 'index' %}#newsy">
+          NEWSY
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#kontakt">KONTAKT</a>
+        <a class="nav-link" href="{% url 'lunch' %}">
+          LUNCH
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'index' %}#kontakt">
+          KONTAKT
+        </a>
       </li>
     </ul>
   </div>
@@ -68,7 +72,7 @@
 <!-- Scroll up button -->
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">
-    <i class="fas fa-angle-up"></i>
+    <i class="fas fa-chevron-up"></i>
 </button>
 
 <!-- Space for blocks -->
@@ -103,6 +107,7 @@
       </div>
      </div>
 </footer>
+
 <script>
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
@@ -121,5 +126,6 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 </script>
+
 </body>
 </html>
